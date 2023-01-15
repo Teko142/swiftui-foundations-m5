@@ -15,16 +15,16 @@ struct Module: Decodable, Identifiable {
     var test: Test
 }
 
-    struct Content: Decodable, Identifiable {
-        
-        var id: Int
-        var image: String
-        var time: String
-        var description: String
-        var lessons: [Lesson]
-        
-    }
+struct Content: Decodable, Identifiable {
     
+    var id: Int
+    var image: String
+    var time: String
+    var description: String
+    var lessons: [Lesson]
+    
+}
+
 struct Lesson :  Decodable, Identifiable {
     
     var id: Int
