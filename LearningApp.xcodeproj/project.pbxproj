@@ -15,6 +15,8 @@
 		1A1EC138296F3FBE0023535E /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A1EC136296F3FBD0023535E /* data.json */; };
 		1A1EC139296F3FBE0023535E /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = 1A1EC137296F3FBD0023535E /* style.html */; };
 		1A1EC13B296F41AF0023535E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1EC13A296F41AF0023535E /* Models.swift */; };
+		1A38CAB12974B4890046696C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A38CAB02974B4890046696C /* ContentView.swift */; };
+		1A38CAB32974BD4C0046696C /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A38CAB22974BD4C0046696C /* ContentViewRow.swift */; };
 		1A7FDF27297377BE00BA4955 /* HomeViweRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7FDF26297377BE00BA4955 /* HomeViweRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		1A1EC136296F3FBD0023535E /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		1A1EC137296F3FBD0023535E /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 		1A1EC13A296F41AF0023535E /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		1A38CAB02974B4890046696C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A38CAB22974BD4C0046696C /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
 		1A7FDF26297377BE00BA4955 /* HomeViweRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViweRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,8 @@
 			children = (
 				1A1EC123296F34500023535E /* HomeView.swift */,
 				1A7FDF26297377BE00BA4955 /* HomeViweRow.swift */,
+				1A38CAB02974B4890046696C /* ContentView.swift */,
+				1A38CAB22974BD4C0046696C /* ContentViewRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,7 +202,9 @@
 			files = (
 				1A7FDF27297377BE00BA4955 /* HomeViweRow.swift in Sources */,
 				1A1EC124296F34500023535E /* HomeView.swift in Sources */,
+				1A38CAB12974B4890046696C /* ContentView.swift in Sources */,
 				1A1EC122296F34500023535E /* LearningApp.swift in Sources */,
+				1A38CAB32974BD4C0046696C /* ContentViewRow.swift in Sources */,
 				1A1EC135296F35710023535E /* ContentModel.swift in Sources */,
 				1A1EC13B296F41AF0023535E /* Models.swift in Sources */,
 			);
