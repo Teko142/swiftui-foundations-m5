@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeViweRow: View {
+struct HomeViewRow: View {
     
     var image: String
     var title: String
@@ -63,8 +63,8 @@ struct HomeViweRow: View {
     }
 }
 
-struct HomeViweRow_Previews: PreviewProvider {
+struct HomeViewRow_Previews: PreviewProvider {
     static var previews: some View {
-        HomeViweRow(image: "swift", title: "Learn Swift", description: "some description", count: "10 Lessons", time: "2 Hours")
+        HomeViewRow(image: "swift", title: "Learn Swift", description: "some description", count: "10 Lessons", time: "2 Hours")
     }
 }
