@@ -20,11 +20,16 @@ class ContentModel: ObservableObject {
     @Published var currentLesson: Lesson?
     var currentLessonIndex = 0
     
-    @Published var lessonDescription = NSAttributedString()
+    // Current question
+    @Published var currentQuestion: Question?
+    var currentQuestionIndex = 0
+    
+    @Published var codeText = NSAttributedString()
     var styleData: Data?
     
     // Current selected content and test
     @Published var currentContentSelected: Int?
+    @Published var currentTestSelected:Int?
     
     init() {
         
@@ -103,7 +108,7 @@ class ContentModel: ObservableObject {
         
         // Set the current lesson
         currentLesson = currentModule!.content.lessons[currentLessonIndex]
-        lessonDescription = addStyling(currentLesson!.explanation)
+        codeText = addStyling(currentLesson!.explanation)
         
     }
     
@@ -117,7 +122,7 @@ class ContentModel: ObservableObject {
             
             // Set the current lesson property
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
-            lessonDescription = addStyling(currentLesson!.explanation)
+            codeText = addStyling(currentLesson!.explanation)
         }
         else {
             // Reset the lesson state
@@ -129,6 +134,18 @@ class ContentModel: ObservableObject {
     func hasNextLesson() -> Bool {
         
         return (currentLessonIndex + 1 < currentModule!.content.lessons.count)
+    }
+    
+    func beginTest(_ moduleId:Int) {
+        
+        beginModule(moduleId)
+        
+        currentQuestionIndex = 0
+        
+        if currentModule?.test.questions.count ?? 0 > 0 {
+            currentQuestion = currentModule!.test.questions[currentQuestionIndex]
+            codeText = addStyling(currentQuestion!.content)
+        }
     }
     
     // MARK: - Code Styling

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A01F1D3299EA0DF000C4AA2 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A01F1D2299EA0DF000C4AA2 /* TestView.swift */; };
 		1A1EC122296F34500023535E /* LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1EC121296F34500023535E /* LearningApp.swift */; };
 		1A1EC124296F34500023535E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1EC123296F34500023535E /* HomeView.swift */; };
 		1A1EC126296F34510023535E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1EC125296F34510023535E /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A01F1D2299EA0DF000C4AA2 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		1A1EC11E296F34500023535E /* LearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1EC121296F34500023535E /* LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningApp.swift; sourceTree = "<group>"; };
 		1A1EC123296F34500023535E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				1A38CAB02974B4890046696C /* ContentView.swift */,
 				1A38CAB22974BD4C0046696C /* ContentViewRow.swift */,
 				1ADEC7F1297896A1000AFE12 /* ContentDetailView.swift */,
+				1A01F1D2299EA0DF000C4AA2 /* TestView.swift */,
 				1AF0938B298011E800A42CD5 /* CodeTextView.swift */,
 				1AA08907299E8ADB00A5866D /* RectangleCard.swift */,
 			);
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A01F1D3299EA0DF000C4AA2 /* TestView.swift in Sources */,
 				1A7FDF27297377BE00BA4955 /* HomeViewRow.swift in Sources */,
 				1A1EC124296F34500023535E /* HomeView.swift in Sources */,
 				1AA08908299E8ADB00A5866D /* RectangleCard.swift in Sources */,
