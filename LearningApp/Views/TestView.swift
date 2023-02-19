@@ -42,7 +42,7 @@ struct TestView: View {
                             } label: {
                                 
                                 ZStack {
-                                
+                                    
                                     if submitted == false {
                                         RectangleCard(color: index == selectedAnswerIndex ? .gray : .white )
                                             .frame(height: 48)
@@ -84,7 +84,7 @@ struct TestView: View {
                                 
                             }
                             .disabled(submitted)
-                                
+                            
                         }
                     }
                     .accentColor(.black)
@@ -93,13 +93,23 @@ struct TestView: View {
                 
                 // Submit Button
                 Button {
-                    
-                    // Change submitted state to true
-                    submitted = true
-                    
-                    // Check the answer and increment the counter if correct
-                    if selectedAnswerIndex == model.currentQuestion!.correctIndex {
-                        numCorrect += 1
+                    // Check if answer has been subitted
+                    if submitted == true {
+                        // Answer has already been submitted, move to next question
+                        model.nextQuestion()
+                        
+                        //Reset properties
+                        submitted = false
+                        selectedAnswerIndex = nil
+                    } else {
+                        // Submit the answer
+                        // Change submitted state to true
+                        submitted = true
+                        
+                        // Check the answer and increment the counter if correct
+                        if selectedAnswerIndex == model.currentQuestion!.correctIndex {
+                            numCorrect += 1
+                        }
                     }
                     
                 } label: {
@@ -109,14 +119,14 @@ struct TestView: View {
                         RectangleCard(color: .green)
                             .frame(height: 48)
                         
-                        Text("Submit")
+                        Text(buttonText)
                             .bold()
                             .foregroundColor(Color.white)
                     }
                     .padding()
                 }
                 .disabled(selectedAnswerIndex == nil)
-
+                
             }
             .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
             
@@ -126,4 +136,18 @@ struct TestView: View {
             
         }
     }
+    
+    var buttonText: String {
+        // Check if answer has been submitted
+        if submitted == true {
+            if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count {
+                return "Finish"
+            } else {
+                return "Next"
+            }
+        } else {
+            return "Submit"
+        }
+    }
+    
 }
